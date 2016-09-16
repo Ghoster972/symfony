@@ -1,0 +1,222 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <link rel="stylesheet" href="{{ asset('css/error404.css') }}" type="text/css" />
+    <div id="content_error">
+
+        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+            {# ... #}
+        {% endif %}
+
+        <div class="frontoffice" id="component_creation_document">
+
+            <div class="creation_document">
+
+
+                <div id="contenu" class="gris remplir">
+                    <div class="inner">
+
+                        <div id="informations_generales_document_en_cours">
+                            <div id="description_du_document">
+                                <h1 class="titre_de_page document">Mentions légales pour un site internet</h1>
+                            </div>
+                            <div id="progression_creation_document">
+                                <span class="label">Progression&nbsp;:</span>
+                                <div class="bandeau">
+                                    <div class="pourcentage"><span class="information_progression ">100%</span></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <section>
+                            <form id="formulaire_creation_document" action="formulaire_generique_controleur.php?document=45&etape=12" method="post">
+
+                                <div class="question"><label class="label_question">Votre site met-il en place une collecte et un stockage des cookies (données de connexion des Utilisateurs)&nbsp;?</label><div class="block_radio"></div><div class="champ_radio_formulaire_principal"><input
+                                                name="cookies"
+                                                id="oui"
+                                                type="radio"
+                                                value="oui"
+                                                accesskey="span_id_cookies"
+
+                                                onclick = "loadFile(this.name, this.value, 45, 12, 1473936881), remplacement_radio_box(this.id);"
+                                                checked="checked"
+                                        >
+                                        <label for="oui">oui</label></div><div class="champ_radio_formulaire_principal"><input
+                                                name="cookies"
+                                                id="non"
+                                                type="radio"
+                                                value="non"
+                                                accesskey="span_id_cookies"
+
+                                                onclick = "loadFile(this.name, this.value, 45, 12, 1473936881), remplacement_radio_box(this.id);"
+
+                                        >
+                                        <label for="non">non</label></div><span class="button tooltip"> ? </span><div class="explication">
+                                        <span class="close"> X </span>
+                                        <p style="white-space:pre-wrap;">Indiquez ici si votre site met en place une collecte et un stockage des cookies.
+
+                                            ATTENTION ! : Le simple fait d'en avertir les Utilisateurs dans les Mentions Légales n'est cependant pas suffisant. Dans le cas ou le site internet s'adonne à cette pratique, il doit en avertir l'Utilisateur par un bandeau apparaissant lors de la première consultation du site.<br><br>Besoin d'une aide personnalisée&nbsp;?<br>À la fin, vous pourrez choisir en option de consulter un avocat.</p>
+                                    </div><div class="allumage  question_no0">Besoin d'aide&nbsp;?</div></div><div class="question"><label class="label_question">Adresse e-mail active pour traiter les signalements&nbsp;:</label><div class="block_radio"></div><input
+                                            name="adresse_e_mail_pour_les_abus"
+                                            placeholder="Ex: abus@nomdusiteinternet.fr"
+                                            id="adresse_e_mail_pour_les_abus"
+                                            type="text"
+                                            value=""
+                                            onKeyUp="remplir_variable('span_id_adresse_e_mail_pour_les_abus', 'adresse_e_mail_pour_les_abus')"
+                                            onchange = "loadFile(this.name, this.value, 45, 12, 1473936881)"
+                                    /><span class="button tooltip"> ? </span><div class="explication">
+                                        <span class="close"> X </span>
+                                        <p style="white-space:pre-wrap;">Notez ici l'adresse e-mail active et consultée régulièrement pour traiter les abus. Celle-ci peut être différente de l'adresse de contact.
+
+                                            Choisissez ici une adresse dont la validité est certaine et régulièrement consultée afin que l'éditeur puisse agir promptement en cas de signalement d'un contenu illicite sur son site.<br><br>Besoin d'une aide personnalisée&nbsp;?<br>À la fin, vous pourrez choisir en option de consulter un avocat.</p>
+                                    </div><div class="allumage  question_no1">Besoin d'aide&nbsp;?</div></div>									<div id="controle">
+                                    <button class="questions suivante autre_etape btn call2action" type="submit" name="suivant" >Terminer<i class="fa fa-chevron-right"></i></button>
+
+                                    <button class="questions retour_arriere btn cancel" type="submit" name="etape_precedente" ><i class="fa fa-chevron-left"></i>Etape précédente</button>
+                                    <div id="enregistrer" class="enr2">
+                                        <span class="comment_modifier open-dialog" data-popup="explication_modifier_modele" id="modifier">Modifier le modèle</span>
+                                    </div>
+                                    <div id="enregistrer">
+                                        <input  class="questions sauvegarder" type="submit" name="sauvegarder" value="Enregistrer (et continuer plus tard)" />
+                                    </div>
+
+                                </div>
+
+                                <input type="hidden" name="form_time" id="form_time" value="1473936881"/>
+
+                            </form>
+
+                            <div id="texte_a_afficher" class="texte_inselectionnable">
+                                <span class="stabilisation"></span><p style="text-align: center;"><strong>MENTIONS LÉGALES DU SITE</strong></p>
+                                <p style="text-align: center;"><strong><span id="span_id_nom_du_site_internet"  >Les petites annonces du web</span><br /><br /></strong></p>
+                                <p><br />Conformément aux dispositions des Articles 6-III et 19 de la Loi n°2004-575 du 21 juin 2004 pour la Confiance dans l'économie numérique, dite L.C.E.N., il est porté à la connaissance des utilisateurs et visiteurs du site <span id="span_id_nom_du_site_internet"  >Les petites annonces du web</span> les présentes mentions légales.</p>
+                                <p><br />Le site <span id="span_id_nom_du_site_internet"  >Les petites annonces du web</span> est accessible à l'adresse suivante : <span id="span_id_url_site"  >www.lespetitesannnoncesweb.com</span> (ci-après "le Site"). L'accès et l'utilisation du Site sont soumis aux présentes " Mentions légales" détaillées ci-après ainsi qu'aux lois et/ou règlements applicables.</p>
+                                <p><span style="text-align: left;"><span style="letter-spacing: 0.001em; line-height: 1.3;">La connexion, l'utilisation et l'accès à ce Site impliquent l'acceptation intégrale et sans réserve de l'internaute de toutes les dispositions des présentes Mentions Légales.</span></span></p>
+                                <p><strong><br />ARTICLE 1 - INFORMATIONS LÉGALES</strong></p>
+                                <p>En vertu de l'Article 6 de la Loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique, il est précisé dans cet article l'identité des différents intervenants dans le cadre de sa réalisation et de son suivi.</p>
+                                <p>Le site <span id="span_id_nom_du_site_internet"  >Les petites annonces du web</span> est édité par :</p>
+
+
+                                <p><strong><span id="span_id_denomination_sociale_de_la_societe"  >SARL</span></strong></p>
+                                <p>ayant son siège social à l'adresse suivante : <span id="span_id_adresse_du_siege_social_de_la_societe"  >37 RUE ROGER SALENGRO PARIS 12</span>, et immatriculée au numéro suivant :<span id="span_id_numero_d_immatriculation_de_la_societe"  >126 365 845 1502</span>.</p>
+                                <p>Téléphone : <span id="span_id_n_de_telephone_de_la_societe"  >01 43 01 12 12</span></p>
+                                <p>Adresse e-mail : <span id="span_id_adresse_mail_editeur"  >lespetitesannoncesweb@gmail.com</span></p>
+                                <p>ci après " l'Éditeur "</p>
+                                <p><br />Le Directeur de publication est :</p>
+                                <p><strong><span id="span_id_civilite_et_nom_du_directeur_de_publication"  >Bryan ANGER</span></strong></p>
+                                <p>Adresse e-mail de contact : <span id="span_id_adresse_e_mail_de_contact_pour_le_site"  >bryananger@lespetitesannoncesweb.com</span></p>
+                                <p>ci après " le Directeur de publication "</p>
+                                <p><br />Le site <span id="span_id_nom_du_site_internet"  >Les petites annonces du web</span> est hébergé par :</p>
+                                <p><strong><span id="span_id_denomination_sociale_de_l_hebergeur"  >OVH</span></strong></p>
+                                <p>dont le siège est situé à l'adresse suivante : <span id="span_id_siege_social_de_l_hebergeur"  >10 AVENUE MULHOUSE 95012</span></p>
+                                <p>Téléphone : <span id="span_id_telephone_de_l_hebergeur"  >+33 02 365 022 66</span></p>
+                                <p>Adresse e-mail : <span id="span_id_e_mail_de_contact_de_l_hebergeur"  >ovh@ovh.com</span>.</p>
+                                <p>ci après " l'Hébergeur "</p>
+                                <p><br />Sont considérés comme utilisateurs tout les internautes qui naviguent, lisent, visionnent et utilisent le site <span id="span_id_nom_du_site_internet"  >Les petites annonces du web</span>.</p>
+                                <p>ci après les " Utilisateurs "</p>
+                                <p><strong><br />ARTICLE 2 - ACCESSIBILITÉ</strong></p>
+                                <p>Le Site est par principe accessible aux utilisateurs 24/24h et 7/7j, sauf interruption, programmée ou non, pour des besoins de maintenance ou en cas de force majeure.</p>
+                                <p>En cas d'impossibilité d'accès au Site, celui-ci s'engage à faire son maximum afin d'en rétablir l'accès. Le Site ne saurait être tenu pour responsable de tout dommage, quelle qu'en soit la nature, résultant de son indisponibilité.</p>
+                                <p><strong><br />ARTICLE 3 - COLLECTE DE DONNÉES ET LOI INFORMATIQUE ET LIBERTÉS</strong></p>
+                                <p>Ce site est déclaré à la Commission Nationale Informatique et Libertés (CNIL) sous  les numéros suivants :</p>
+                                <p><span id="span_id_numeros_de_declaration_a_la_cnil"  ><span class="variable_vide">________</span></span></p>
+                                <p>En outre, il est conforme aux dispositions de la Loi 78-17 du 6 janvier 1978 relative à l'informatique, aux fichiers et aux libertés. En vertu de celle-ci l'Utilisateur bénéficie notamment d'un droit d'opposition (art. 32 et 38), d'accès (art. 38 et 39) et de rectification (art. 40) des données le concernant.</p>
+                                <p>Pour faire usage de celui-ci, l'Utilisateur doit s'adresser à l'Éditeur en le contactant à l'adresse suivante : <span id="span_id_adresse_e_mail_de_contact_pour_le_site"  >bryananger@lespetitesannoncesweb.com</span>, ou par courrier adressé au siège social de l'Éditeur en précisant ses nom, prénom(s), adresse et adresse(s) e-mail.</p>
+
+                                <p><strong><br />ARTICLE 4 - POLITIQUE DE COOKIES</strong></p>
+                                <p>Le site <span id="span_id_nom_du_site_internet"  >Les petites annonces du web</span> a éventuellement recours aux techniques de "cookies" lui permettant de traiter des statistiques et des informations sur le trafic, de faciliter la navigation et d'améliorer le service pour le confort de l'Utilisateur.</p>
+                                <p>Conformément à la législation européenne, le site <span id="span_id_nom_du_site_internet"  >Les petites annonces du web</span> a mis à jour sa politique de confidentialité en matière de cookies. L'Utilisateur est libre d'accepter ou de refuser les cookies de tous les sites internet en modifiant les paramètres de son navigateur internet.</p>
+                                <p><strong><br />ARTICLE 5 - LOI APPLICABLE ET JURIDICTION</strong></p>
+                                <p><span class="flou">Eaa dfaaabfaa Fabffcba Eadcfaa acbf fadfaa dcf fc fcf bfcbacfaa. Ab aca ba bfbbafabb af c babcbf b'caacfb cafcafa, fa ffffda aafc dcffa baecbf faa fffabbcba bfcbacfa acbbcfaaaabf cba fadfaa ba acadafabaa ab efdbabf.</span></p>
+                                <p><br /><strong>ARTICLE 6 - CONTACT</strong></p>
+                                <p>Pour tout signalement de contenus ou d'activités illicites, l'Utilisateur peut contacter l'Éditeur à l'adresse suivante : <span id="span_id_adresse_e_mail_pour_les_abus"  class="encours"  ><span class="variable_vide">________</span></span>, ou par courrier recommandé avec accusé de réception adressé à l'Éditeur aux coordonnées précisées dans les présentes mentions légales. <span class="flou"><br /><br /><br />Le affa <span id="span_id_bca_bb_affa_fbfafbaf"  ><span class="variable_vide">________</span></span> ecba acbacffa bba aaaaffabfa bcefdcffcb !<br /></span></p>							</div>
+                        </section>
+
+                    </div>
+                </div>
+                <div class="juste_mobile afficher_le_texte">
+                    <div class="interieur_div">
+                        <i class="fa fa-chevron-up arrow arrow-left"></i>
+                        Voir votre document<br/>en cours de création				<i class="fa fa-chevron-up arrow arrow-right"></i>
+                        <div id="texte_a_afficher_mobile" class="texte_inselectionnable">
+                            <span class="stabilisation"></span><p style="text-align: center;"><strong>MENTIONS LÉGALES DU SITE</strong></p>
+                            <p style="text-align: center;"><strong><span id="span_id_nom_du_site_internet"  >Les petites annonces du web</span><br /><br /></strong></p>
+                            <p><br />Conformément aux dispositions des Articles 6-III et 19 de la Loi n°2004-575 du 21 juin 2004 pour la Confiance dans l'économie numérique, dite L.C.E.N., il est porté à la connaissance des utilisateurs et visiteurs du site <span id="span_id_nom_du_site_internet"  >Les petites annonces du web</span> les présentes mentions légales.</p>
+                            <p><br />Le site <span id="span_id_nom_du_site_internet"  >Les petites annonces du web</span> est accessible à l'adresse suivante : <span id="span_id_url_site"  >www.lespetitesannnoncesweb.com</span> (ci-après "le Site"). L'accès et l'utilisation du Site sont soumis aux présentes " Mentions légales" détaillées ci-après ainsi qu'aux lois et/ou règlements applicables.</p>
+                            <p><span style="text-align: left;"><span style="letter-spacing: 0.001em; line-height: 1.3;">La connexion, l'utilisation et l'accès à ce Site impliquent l'acceptation intégrale et sans réserve de l'internaute de toutes les dispositions des présentes Mentions Légales.</span></span></p>
+                            <p><strong><br />ARTICLE 1 - INFORMATIONS LÉGALES</strong></p>
+                            <p>En vertu de l'Article 6 de la Loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique, il est précisé dans cet article l'identité des différents intervenants dans le cadre de sa réalisation et de son suivi.</p>
+                            <p>Le site <span id="span_id_nom_du_site_internet"  >Les petites annonces du web</span> est édité par :</p>
+
+
+                            <p><strong><span id="span_id_denomination_sociale_de_la_societe"  >SARL</span></strong></p>
+                            <p>ayant son siège social à l'adresse suivante : <span id="span_id_adresse_du_siege_social_de_la_societe"  >37 RUE ROGER SALENGRO PARIS 12</span>, et immatriculée au numéro suivant :<span id="span_id_numero_d_immatriculation_de_la_societe"  >126 365 845 1502</span>.</p>
+                            <p>Téléphone : <span id="span_id_n_de_telephone_de_la_societe"  >01 43 01 12 12</span></p>
+                            <p>Adresse e-mail : <span id="span_id_adresse_mail_editeur"  >lespetitesannoncesweb@gmail.com</span></p>
+                            <p>ci après " l'Éditeur "</p>
+                            <p><br />Le Directeur de publication est :</p>
+                            <p><strong><span id="span_id_civilite_et_nom_du_directeur_de_publication"  >Bryan ANGER</span></strong></p>
+                            <p>Adresse e-mail de contact : <span id="span_id_adresse_e_mail_de_contact_pour_le_site"  >bryananger@lespetitesannoncesweb.com</span></p>
+                            <p>ci après " le Directeur de publication "</p>
+                            <p><br />Le site <span id="span_id_nom_du_site_internet"  >Les petites annonces du web</span> est hébergé par :</p>
+                            <p><strong><span id="span_id_denomination_sociale_de_l_hebergeur"  >OVH</span></strong></p>
+                            <p>dont le siège est situé à l'adresse suivante : <span id="span_id_siege_social_de_l_hebergeur"  >10 AVENUE MULHOUSE 95012</span></p>
+                            <p>Téléphone : <span id="span_id_telephone_de_l_hebergeur"  >+33 02 365 022 66</span></p>
+                            <p>Adresse e-mail : <span id="span_id_e_mail_de_contact_de_l_hebergeur"  >ovh@ovh.com</span>.</p>
+                            <p>ci après " l'Hébergeur "</p>
+                            <p><br />Sont considérés comme utilisateurs tout les internautes qui naviguent, lisent, visionnent et utilisent le site <span id="span_id_nom_du_site_internet"  >Les petites annonces du web</span>.</p>
+                            <p>ci après les " Utilisateurs "</p>
+                            <p><strong><br />ARTICLE 2 - ACCESSIBILITÉ</strong></p>
+                            <p>Le Site est par principe accessible aux utilisateurs 24/24h et 7/7j, sauf interruption, programmée ou non, pour des besoins de maintenance ou en cas de force majeure.</p>
+                            <p>En cas d'impossibilité d'accès au Site, celui-ci s'engage à faire son maximum afin d'en rétablir l'accès. Le Site ne saurait être tenu pour responsable de tout dommage, quelle qu'en soit la nature, résultant de son indisponibilité.</p>
+                            <p><strong><br />ARTICLE 3 - COLLECTE DE DONNÉES ET LOI INFORMATIQUE ET LIBERTÉS</strong></p>
+                            <p>Ce site est déclaré à la Commission Nationale Informatique et Libertés (CNIL) sous  les numéros suivants :</p>
+                            <p><span id="span_id_numeros_de_declaration_a_la_cnil"  ><span class="variable_vide">________</span></span></p>
+                            <p>En outre, il est conforme aux dispositions de la Loi 78-17 du 6 janvier 1978 relative à l'informatique, aux fichiers et aux libertés. En vertu de celle-ci l'Utilisateur bénéficie notamment d'un droit d'opposition (art. 32 et 38), d'accès (art. 38 et 39) et de rectification (art. 40) des données le concernant.</p>
+                            <p>Pour faire usage de celui-ci, l'Utilisateur doit s'adresser à l'Éditeur en le contactant à l'adresse suivante : <span id="span_id_adresse_e_mail_de_contact_pour_le_site"  >bryananger@lespetitesannoncesweb.com</span>, ou par courrier adressé au siège social de l'Éditeur en précisant ses nom, prénom(s), adresse et adresse(s) e-mail.</p>
+
+                            <p><strong><br />ARTICLE 4 - POLITIQUE DE COOKIES</strong></p>
+                            <p>Le site <span id="span_id_nom_du_site_internet"  >Les petites annonces du web</span> a éventuellement recours aux techniques de "cookies" lui permettant de traiter des statistiques et des informations sur le trafic, de faciliter la navigation et d'améliorer le service pour le confort de l'Utilisateur.</p>
+                            <p>Conformément à la législation européenne, le site <span id="span_id_nom_du_site_internet"  >Les petites annonces du web</span> a mis à jour sa politique de confidentialité en matière de cookies. L'Utilisateur est libre d'accepter ou de refuser les cookies de tous les sites internet en modifiant les paramètres de son navigateur internet.</p>
+                            <p><strong><br />ARTICLE 5 - LOI APPLICABLE ET JURIDICTION</strong></p>
+                            <p><span class="flou">Eaa dfaaabfaa Fabffcba Eadcfaa acbf fadfaa dcf fc fcf bfcbacfaa. Ab aca ba bfbbafabb af c babcbf b'caacfb cafcafa, fa ffffda aafc dcffa baecbf faa fffabbcba bfcbacfa acbbcfaaaabf cba fadfaa ba acadafabaa ab efdbabf.</span></p>
+                            <p><br /><strong>ARTICLE 6 - CONTACT</strong></p>
+                            <p>Pour tout signalement de contenus ou d'activités illicites, l'Utilisateur peut contacter l'Éditeur à l'adresse suivante : <span id="span_id_adresse_e_mail_pour_les_abus"  class="encours"  ><span class="variable_vide">________</span></span>, ou par courrier recommandé avec accusé de réception adressé à l'Éditeur aux coordonnées précisées dans les présentes mentions légales. <span class="flou"><br /><br /><br />Le affa <span id="span_id_bca_bb_affa_fbfafbaf"  ><span class="variable_vide">________</span></span> ecba acbacffa bba aaaaffabfa bcefdcffcb !<br /></span></p>				</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="texte_explication_remplissage" style="display:none;">
+                Utilisez le formulaire à gauche pour remplir le modèle.			</div>
+            <div id="texte_explication_mots_floutes" style="display:none;">Les mots floutés sont mis en clair au téléchargement.</div>
+            <div id="texte_explication_mots_grises" style="display:none;">Les mots grisés sont mis en clair au téléchargement.</div>
+
+            <!-- POPUP MODIFIER LE DOCUMENT -->
+            <div class="popup-dialog-content" id="explication_modifier_modele">
+
+                <h2>POUR MODIFIER LE MODÈLE</h2>
+
+                <p>Utilisez le formulaire à gauche pour remplir le modèle.</p>
+                <br />
+                <p>Le document <b>se rédige en fonction de vos réponses</b>&nbsp;: des articles s'ajoutent ou s'enlèvent, des paragraphes se modifient, des mots changent...</p>
+                <br />
+                <p>
+                    A la fin, vous recevrez <b>immédiatement et gratuitement</b> le document aux formats <b>Word et PDF</b>.					Vous pourrez alors <b>ouvrir le document Word</b> pour le <b>modifier</b> et le <b>réutiliser</b> comme vous voulez.			 </p>
+
+                <br />
+                <p>Vous aurez aussi l'option de demander l'aide d'un avocat.</p>
+                <br />
+                <div class="actions_de_bas_de_popup bloquant single-centered-alert vertical-space">
+                    <div class="btn cancel large close-dialog appended fermer2">OK</div>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+
+    </div>
+{% endblock %}

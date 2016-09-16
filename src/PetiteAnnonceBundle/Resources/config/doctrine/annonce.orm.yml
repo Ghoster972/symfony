@@ -1,0 +1,18 @@
+PetiteAnnonceBundle\Entity\annonce:
+    type: entity
+    table: null
+    repositoryClass: PetiteAnnonceBundle\Repository\annonceRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        date:
+            type: date
+        contenu:
+            type: string
+            length: 255
+            nullable: true
+    lifecycleCallbacks: {  }

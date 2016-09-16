@@ -1,0 +1,7 @@
+petite_annonce:
+    resource: "@PetiteAnnonceBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation

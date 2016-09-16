@@ -1,0 +1,27 @@
+petite_annonce_annonce:
+    resource: "@PetiteAnnonceBundle/Resources/config/routing/annonce.yml"
+    prefix:   /annonce
+
+petite_annonce_homepage:
+    path:     /
+    defaults: { _controller: PetiteAnnonceBundle:Default:index }
+
+petite_annonce_liste_annonce:
+    path:     /listeAnnonce
+    defaults: { _controller: PetiteAnnonceBundle:Content:listeAnnonce }
+
+petite_annonce_detail_annonce:
+    path:     /detailAnnonce/{id}
+    defaults: { _controller: PetiteAnnonceBundle:Content:detailAnnonce }
+
+petite_annonce_mention_legal:
+    path:     /mentionLegale/
+    defaults: { _controller: PetiteAnnonceBundle:Content:mentionLegale }
+
+petite_annonce_cgu:
+    path:     /cgu/
+    defaults: { _controller: PetiteAnnonceBundle:Content:cgu }
+
+petite_annonce_faq:
+    path:     /faq
+    defaults: { _controller: PetiteAnnonceBundle:Content:faq }

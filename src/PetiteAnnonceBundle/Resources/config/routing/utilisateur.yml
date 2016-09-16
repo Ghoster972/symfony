@@ -1,0 +1,24 @@
+utilisateur_index:
+    path:     /
+    defaults: { _controller: "PetiteAnnonceBundle:utilisateur:index" }
+    methods:  GET
+
+utilisateur_show:
+    path:     /{id}/show
+    defaults: { _controller: "PetiteAnnonceBundle:utilisateur:show" }
+    methods:  GET
+
+utilisateur_new:
+    path:     /new
+    defaults: { _controller: "PetiteAnnonceBundle:utilisateur:new" }
+    methods:  [GET, POST]
+
+utilisateur_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "PetiteAnnonceBundle:utilisateur:edit" }
+    methods:  [GET, POST]
+
+utilisateur_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "PetiteAnnonceBundle:utilisateur:delete" }
+    methods:  DELETE

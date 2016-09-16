@@ -1,0 +1,16 @@
+{% extends 'base.html.twig.' %}
+
+{% block body %}
+    <link rel="stylesheet" href="{{ asset('css/error404.css') }}" type="text/css" />
+    <div id="content_error">
+        <h1>Bienvenue sur la FAQ</h1>
+
+        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+            {# ... #}
+        {% endif %}
+
+        <p>
+            Vous pouvez voir les dernières news
+        </p>
+    </div>
+{% endblock %}
